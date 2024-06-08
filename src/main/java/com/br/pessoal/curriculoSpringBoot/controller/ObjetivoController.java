@@ -25,7 +25,7 @@ public class ObjetivoController {
 
     //getById
     @GetMapping("/{id}")
-    public ResponseEntity<Objetivo> getByIdObjetivo(Long id) {
+    public ResponseEntity<Objetivo> getByIdObjetivo(@PathVariable Long id) {
         Optional<Objetivo> objetivoOptional = objetivoService.findById(id);
 
         if(objetivoOptional.isPresent()) {
@@ -43,7 +43,7 @@ public class ObjetivoController {
 
     @PostMapping
     //post
-    public Objetivo creatObjetivo(Objetivo objetivo) {
+    public Objetivo creatObjetivo(@RequestBody Objetivo objetivo) {
         return objetivoService.save(objetivo);
     }
 

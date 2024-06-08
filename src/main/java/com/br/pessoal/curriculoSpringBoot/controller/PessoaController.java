@@ -25,7 +25,7 @@ public class PessoaController {
 
     //getOne
     @GetMapping("/{id}")
-    public ResponseEntity<Pessoa> getByIdPessoa(Long id) {
+    public ResponseEntity<Pessoa> getByIdPessoa(@PathVariable Long id) {
         Optional<Pessoa> pessoaOptional = pessoaService.findById(id);
 
         if (pessoaOptional.isPresent()) {
@@ -43,7 +43,7 @@ public class PessoaController {
 
     //post
     @PostMapping
-    public Pessoa creatPessoa(Pessoa pessoa) {
+    public Pessoa creatPessoa(@RequestBody Pessoa pessoa) {
         return pessoaService.save(pessoa);
     }
 
