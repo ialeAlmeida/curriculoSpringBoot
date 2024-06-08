@@ -15,7 +15,6 @@ import lombok.Setter;
 @Table(name = "objetivos")
 @Getter
 @Setter
-@AllArgsConstructor
 public class Objetivo {
     
     @Id
@@ -27,6 +26,10 @@ public class Objetivo {
     @ManyToOne
     @JoinColumn(name = "id_pessoa")
     private Pessoa pessoa;
+
+    public Objetivo(String descricao) {
+        this.descricao = descricao;
+    }
 
     @Override 
     public String toString() {

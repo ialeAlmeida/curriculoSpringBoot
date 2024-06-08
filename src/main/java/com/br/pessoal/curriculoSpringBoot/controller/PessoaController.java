@@ -69,7 +69,7 @@ public class PessoaController {
 
     //delete
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteByIdPessoa(Long id){
+    public ResponseEntity<?> deleteByIdPessoa(@PathVariable Long id){
         Optional<Pessoa> pessoaOptional = pessoaService.findById(id);
 
         if (pessoaOptional.isPresent()) {
