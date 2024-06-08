@@ -32,16 +32,16 @@ public class Pessoa {
     private String email;
     private String gitHub;
 
-    @OneToMany(mappedBy = "pessoas", cascade = CascadeType.ALL)
+    @OneToMany
     private List<Objetivo> objetivos = new ArrayList<>();
 
-    @OneToMany(mappedBy = "pessoas", cascade = CascadeType.ALL)
+    @OneToMany
     private List<Educacao> educacoes = new ArrayList<>();
 
-    @OneToMany(mappedBy = "pessoas", cascade = CascadeType.ALL)
+    @OneToMany
     private List<Experiencia> experiencias = new ArrayList<>();
 
-    @OneToMany(mappedBy = "pessoas", cascade = CascadeType.ALL)
+    @OneToMany
     private List<Habilidade> habilidades = new ArrayList<>();
 
     public Pessoa(String nome, int idade, String cargoAlmejado, String contato, String cidade, String estado, String email, String gitHub) {
