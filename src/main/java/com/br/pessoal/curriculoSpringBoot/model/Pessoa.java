@@ -44,6 +44,17 @@ public class Pessoa {
     @OneToMany(mappedBy = "pessoas", cascade = CascadeType.ALL)
     private List<Habilidade> habilidades = new ArrayList<>();
 
+    public Pessoa(String nome, int idade, String cargoAlmejado, String contato, String cidade, String estado, String email, String gitHub) {
+        this.nome = nome;
+        this.idade = idade;
+        this.cargoAlmejado = cargoAlmejado;
+        this.contato = contato;
+        this.cidade = cidade;
+        this.estado = estado;
+        this.email = email;
+        this.gitHub = gitHub;
+    }
+
     @Override
     public String toString() {
         return String.format("""

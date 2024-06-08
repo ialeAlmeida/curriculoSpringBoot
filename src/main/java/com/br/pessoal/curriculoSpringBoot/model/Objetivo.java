@@ -15,6 +15,7 @@ import lombok.Setter;
 @Table(name = "objetivos")
 @Getter
 @Setter
+@AllArgsConstructor
 public class Objetivo {
     
     @Id
