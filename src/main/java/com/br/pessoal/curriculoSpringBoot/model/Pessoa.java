@@ -32,6 +32,10 @@ public class Pessoa {
     private String email;
     private String gitHub;
 
-    @OneToMany(mappedBy = "pessoas",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "pessoas", cascade = CascadeType.ALL)
     private List<Objetivo> objetivos = new ArrayList<>();
+
+    @OneToMany(mappedBy = "pessoas", cascade = CascadeType.ALL)
+    private List<Educacao> educacoes = new ArrayList<>();
+
 }
