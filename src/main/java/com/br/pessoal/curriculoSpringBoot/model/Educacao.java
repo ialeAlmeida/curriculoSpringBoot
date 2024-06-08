@@ -32,6 +32,14 @@ public class Educacao {
     @JoinColumn(name = "id_pessoa")
     private Pessoa pessoa; 
 
+    public Educacao(String nome, String tipo, int anoConclusao, int semestre, String instituicao) {
+        this.nome = nome;
+        this.tipo = tipo;
+        this.anoConclusao = anoConclusao;
+        this.semestre = semestre;
+        this.instituicao = instituicao;
+    }
+
     @Override
     public String toString() {
         return String.format("""
