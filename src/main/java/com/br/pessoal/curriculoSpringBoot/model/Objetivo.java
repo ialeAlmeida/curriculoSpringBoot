@@ -32,8 +32,6 @@ public class Objetivo {
         this.descricao = descricao;
     }
 
-    public Objetivo() {}
-
     @Override 
     public String toString() {
         return String.format("""
