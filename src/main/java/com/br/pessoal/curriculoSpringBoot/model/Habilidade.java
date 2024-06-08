@@ -27,4 +27,9 @@ public class Habilidade {
     @ManyToOne
     @JoinColumn(name = "id_pessoa")
     private Pessoa pessoa;
+
+    @Override
+    public String toString() {
+        return nome;
+    }
 }

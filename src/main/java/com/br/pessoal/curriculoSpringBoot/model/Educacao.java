@@ -26,9 +26,17 @@ public class Educacao {
     private String tipo;
     private int anoConclusao;
     private int semestre;
-    private String intituicao;
+    private String instituicao;
 
     @ManyToOne
     @JoinColumn(name = "id_pessoa")
     private Pessoa pessoa; 
+
+    @Override
+    public String toString() {
+        return String.format("""
+                %s em %s
+                %d.%d - %s
+                """, tipo, nome, anoConclusao, semestre, instituicao);
+    }
 }

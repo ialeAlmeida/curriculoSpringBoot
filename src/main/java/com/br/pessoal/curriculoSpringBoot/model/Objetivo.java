@@ -27,4 +27,13 @@ public class Objetivo {
     @ManyToOne
     @JoinColumn(name = "id_pessoa")
     private Pessoa pessoa;
+
+    @Override 
+    public String toString() {
+        return String.format("""
+                OBJETIVO
+
+                %s
+                """, descricao);
+    }
 }

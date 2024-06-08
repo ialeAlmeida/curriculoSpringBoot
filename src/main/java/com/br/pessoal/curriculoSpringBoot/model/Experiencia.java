@@ -25,10 +25,19 @@ public class Experiencia {
     private String nome;
     private int anoConclusao;
     private int semestre;
-    private String intituicao;
+    private String instituicao;
     private String descricao;
 
     @ManyToOne
     @JoinColumn(name = "id_pessoa")
     private Pessoa pessoa; 
+
+    @Override
+    public String toString() {
+        return String.format("""
+                %s - %s
+                %d.%d
+                %s
+                """, instituicao, nome, anoConclusao, semestre, descricao);
+    }
 }
