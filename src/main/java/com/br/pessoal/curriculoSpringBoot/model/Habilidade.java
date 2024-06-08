@@ -28,6 +28,10 @@ public class Habilidade {
     @JoinColumn(name = "id_pessoa")
     private Pessoa pessoa;
 
+    public Habilidade(String nome) {
+        this.nome = nome;
+    }
+
     @Override
     public String toString() {
         return nome;
