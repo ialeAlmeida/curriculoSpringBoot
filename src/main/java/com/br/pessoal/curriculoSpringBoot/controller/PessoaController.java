@@ -76,7 +76,7 @@ public class PessoaController {
             pessoaService.deleteById(id);
             return ResponseEntity.ok("Pessoa deletada com sucesso");
         } else {
-            return ResponseEntity.status(404).body("Pessoa não encontra");
+            return ResponseEntity.status(404).body("Pessoa não encontrada");
         }
 
     }
