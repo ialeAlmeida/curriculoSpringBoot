@@ -38,4 +38,6 @@ public class Pessoa {
     @OneToMany(mappedBy = "pessoas", cascade = CascadeType.ALL)
     private List<Educacao> educacoes = new ArrayList<>();
 
+    @OneToMany(mappedBy = "pessoas", cascade = CascadeType.ALL)
+    private List<Experiencia> experiencias = new ArrayList<>();
 }
